@@ -1,0 +1,126 @@
+.main {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.main__icon-wrapper {
+    width: 175px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    border-radius: 50%;
+    background: linear-gradient(35deg, #f1d684, #ef384b, #c42e91,#883fba);
+    cursor: pointer;
+}
+
+.main__icon {
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #dddddd, 0 0 0 6px #ffffff;
+    width: 155px;
+    height: 155px; 
+    background-image: url('/img/instagram.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%; 
+    background-color: white;
+    text-align: center;
+}
+
+
+.main__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__text-subject {margin-bottom: 20px;}
+
+.main__text-subject-name {
+    font-size: 28px;
+    font-weight: 300;  
+}
+
+.main__text-subject-figure {
+    display: inline-block;
+    width: 18px; 
+    height: 18px; 
+    margin: 10px;
+    background:  #0095f6;
+    position: relative;
+}
+
+ .main__text-subject-figure::after,
+ .main__text-subject-figure::before {
+    content: '';
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 18px; 
+    height: 18px; 
+    background: inherit;
+}
+
+.main__text-subject-figure::before {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+
+}
+ .main__text-subject-figure::after {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg);
+}  
+
+.main__text-subject-button {
+    font-family: inherit;
+    padding: 5px 9px;
+    background-color: #0095f6;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.main__text-statistic {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.main__text-statistic span {font-weight: 500;}
+
+.main__text-statistic-item {
+    margin: 0;
+    padding: 0;
+    margin-right: 25px;
+    list-style: none;
+}
+
+.main__text-statistic-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main__text-description {line-height: 24px;}
+
+.main__text-description-title {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: 500;
+}
+
+.main__text-description-subtitle {}
+
+.main__text-description-link {
+    font-weight: 500;
+    color: #46376b;
+    text-decoration: none;
+}

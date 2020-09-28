@@ -1,0 +1,122 @@
+.profile-info {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.profile-info__icon-wrapper {
+    min-width: 175px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 85px;
+    margin-left: 50px;
+    border-radius: 50%;
+    background: linear-gradient(35deg, #f1d684, #ef384b, #c42e91,#883fba);
+    cursor: pointer;
+
+}
+
+.profile-info__icon {
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #dddddd, 0 0 0 6px #ffffff;
+    width: 155px;
+    height: 155px; 
+    background-image: url('/img/instagram.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%; 
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.profile-info__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.profile-info__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-info__username {
+    font-size: 28px;
+    font-weight: 300; 
+}
+
+.profile-info__verified-icon {
+    display: inline-block;
+    width: 15px; 
+    height: 15px; 
+    margin-left: 10px;
+    margin-bottom: 6px;
+    background-color:#0095f6;
+    background-image: url('/img/checkmark.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1000; /*не получается =(*/
+}
+
+ .profile-info__verified-icon::after,
+ .profile-info__verified-icon::before {
+    content: '';
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 15px; 
+    height: 15px; 
+    background-color:#0095f6;    
+    z-index: -1;
+}
+
+.profile-info__verified-icon::before {transform: rotate(30deg);}
+
+.profile-info__verified-icon::after {transform: rotate(60deg);}
+    
+.profile-info__follow-button {
+    margin-left: 20px;
+    align-self: flex-start;
+}
+
+.profile-info__stats {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.profile-info__stats span {font-weight: 500;}
+
+.profile-info__stat {
+    margin: 0;
+    padding: 0;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.profile-info__stat-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-info__bio {line-height: 24px;}
+
+.profile-info__bio-name {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: 500;
+}
+
+.profile-info__bio-text {}
+
+.profile-info__bio-link {
+    font-weight: 500;
+    color: #46376b;
+    text-decoration: none;
+}

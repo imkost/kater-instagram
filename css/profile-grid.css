@@ -1,0 +1,103 @@
+.profile-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-grid__row {
+    display: flex;
+    margin-bottom: 28px;
+}
+
+.profile-grid__item {
+    margin-right: 25px;
+    position: relative;
+    width: 293px;
+    height: 293px;
+    cursor: pointer;
+}
+.profile-grid__item:last-child {margin-right: 0;}
+
+.profile-grid__item::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height:32px;
+    position: absolute;
+    left: 88%;
+    top: 1%;
+    background-image: url('/img/sprite_ProfileGridPhoto.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.profile-grid__row:first-of-type .profile-grid__item:nth-child(2)::before {background-position: 0 -34px;}
+.profile-grid__row:nth-of-type(2) .profile-grid__item:nth-child(3)::before {background-position: -34px 0;}
+
+.profile-grid__item::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: background-color 0.2s;
+}
+
+.profile-grid__item:hover::after {background-color: rgba(0, 0, 0, 0.3);}
+
+.profile-grid__hover-mask {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    z-index: 500; 
+    visibility: hidden;
+}
+
+.profile-grid__item:hover .profile-grid__hover-mask {visibility: visible;}
+
+.profile-grid__hover-mask-likes {
+    margin-left: 35%;
+    position: relative;
+}
+
+.profile-grid__hover-mask-comments {
+     margin-left: 15%;
+     position: relative;
+}
+
+.profile-grid__hover-mask-likes::before,
+.profile-grid__hover-mask-comments::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 80% ;
+    top: 2%;
+    background-image: url('/img/likes.png');
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.profile-grid__hover-mask-comments::before {
+    background-image: url('/img/comments.png');
+    background-size: 40%;
+}
+
+.profile-grid__pic {
+    object-fit: cover;
+    width: 293px;
+    height: 293px;
+    cursor: pointer;
+}

@@ -1,17 +1,21 @@
-.stories-slider {
+.highlights {
     display: flex;
     position: relative;
     margin-bottom: 45px;
 }
 
-.stories-slider__card {
+.highlights__card {
     padding: 10px 15px;
     width: 115px;
     text-align: center;
-    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.stories-slider__image {
+.highlights__card:last-of-type {padding-right: 0;}
+
+.highlights__image {
     border-radius: 50%;
     border: 1px solid #dddddd;
     width: 77px;
@@ -20,34 +24,39 @@
     cursor: pointer;
 }
 
-.stories-slider__title {
+.highlights__title {
     padding-top: 15px;
     font-weight: 500;
     cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
 }
 
-.stories-slider__pointer {
+.highlights__control {
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-color: rgba(95, 44, 44, 0.5);
+    width: 22px;
+    height: 22px;
+    background-color:rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     position: absolute;
-    right: 0;
-    top: 50px;
+    right: 10px;
+    top: 38%;
+    cursor: pointer;
 }
 
-.stories-slider__pointer:after {
+.highlights__control:after {
     content: '';
     display: inline-block;
-    color: white;
+    color: #ffffff;
     border-style: solid;
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     border-width: 0 3px 3px 0;
     transform: rotate(-45deg);
     position: absolute;
-    left: calc(50% - 7px); 
-    top: calc(50% - 7px);
+    left: calc(50% - 5px); 
+    top: calc(50% - 4px);
     z-index: 50;
 }

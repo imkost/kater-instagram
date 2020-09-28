@@ -1,0 +1,38 @@
+.tabs {
+    width: 100%;
+    border-top: 1px solid #dddddd;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #8e91ac;
+    letter-spacing: 1px;
+    font-size: 12;
+    font-weight: 500;
+    padding: 20px 0;
+    white-space: nowrap;
+    border-top: 1px solid transparent;
+}
+
+.tabs__link:not(:last-child) {margin-right: 60px;}
+
+.tabs__link--active {    
+    color: #262626;
+    border-top: 1px solid #262626;
+}
+
+.tabs__link--active svg path {fill: #262626;}
+
+.tabs__name {margin-left: 5px;}
+
+.tabs__link:hover,
+.tabs__link:active {  
+    color: #262626;
+    border-top: 1px solid #262626;
+}
+
+.tabs__link:hover svg path,
+.tabs__link:active svg path {fill: #262626;}
